@@ -30,6 +30,7 @@ public class HelloWorld {
 	@GetMapping("/user/{id}")
 	public User readUser(@PathVariable Long id,HttpServletRequest request){
 		User u = this.userMapper.getUser(id);
+		System.out.println("id = [" + id + "], request = [" + request + "]");
 		return u;
 	}
 }
